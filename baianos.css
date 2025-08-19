@@ -1,0 +1,15 @@
+body {
+        background: linear-gradient(to right, rgb(6, 50, 208), rgb(0, 0, 0), rgb(220, 220, 220));
+        text-align: center;
+      }
+    
+#imagem{
+   border-radius: 10px;
+
+}
+#amigo{
+    color: rgb(255, 0, 0);
+    
+}
+
+
