@@ -1,10 +1,18 @@
-let n1 = document.getElementById('n1')
-let n2 = document.getElementById('n2')
-let resultado = document.getElementById('resultado')
+function calcular(op) {
+  let n1 = parseFloat(document.getElementById("num1").value);
+  let n2 = parseFloat(document.getElementById("num2").value);
+  let res = "";
 
-document.getElementById('+')= function somar(){ 
-    let numero1 = n1.value.trim()
-    let numero2 = n2.value.trim()
-    let resultados= numero1 + numero2
-    resultados.innerHTML = ('Resultado', resultado)
+  if (isNaN(n1) || isNaN(n2)) {
+    res = "Digite dois números!";
+  } else {
+    switch(op) {
+      case "+": res = n1 + n2; break;
+      case "-": res = n1 - n2; break;
+      case "*": res = n1 * n2; break;
+      case "/": res = n2 !== 0 ? n1 / n2 : "Erro: divisão por zero"; break;
+    }
+  }
+
+  document.getElementById("resultado").textContent = res;
 }
